@@ -12,7 +12,8 @@ public:
             
             ind = i;
             
-            while(i < haystackSize && j < needleSize && haystack[i] == needle[j]) {
+            while(i < haystackSize && j < needleSize &&
+                  haystack[i] == needle[j]) {
                 
                 i++;
                 j++;
