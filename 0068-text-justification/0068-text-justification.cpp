@@ -1,14 +1,14 @@
 class Solution {
 public:
     vector<string> fullJustify(vector<string>& words, int maxWidth) {
-        std::vector<std::string> res;
+        vector<string> res;
 
         int i = 0;
         int width = 0;
-        std::vector<std::string> curLine;
+        vector<string> curLine;
 
         while (i < words.size()) {
-            std::string curWord = words[i];
+            string curWord = words[i];
 
             if (width + curWord.length() <= maxWidth) {
                 curLine.push_back(curWord);
@@ -31,9 +31,9 @@ public:
                     j++;
                 }
 
-                std::string line = "";
+                string line = "";
                 
-                for (const std::string& word : curLine) {
+                for (const string& word : curLine) {
                     line += word;
                 }
                 res.push_back(line);
@@ -46,11 +46,11 @@ public:
         for (int word = 0; word < curLine.size() - 1; word++) {
             curLine[word] += " ";
         }
-        curLine[curLine.size() - 1] += std::string(maxWidth - width + 1, ' ');
+        curLine[curLine.size() - 1] += string(maxWidth - width + 1, ' ');
 
-        std::string lastLine = "";
+        string lastLine = "";
         
-        for (const std::string& word : curLine) {
+        for (const string& word : curLine) {
             lastLine += word;
         }
         res.push_back(lastLine);
