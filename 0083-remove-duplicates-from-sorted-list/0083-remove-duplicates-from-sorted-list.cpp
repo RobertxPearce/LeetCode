@@ -20,10 +20,10 @@ public:
         while (curr != NULL) {              // Loop until null is reached.
             if (curr->val == prev->val) {   // Check if value match.
                 prev->next = curr->next;    // If so remove duplicate.
-                curr = curr->next;              // Go to next node.
+                curr = curr->next;          // Go to next node.
             } else {
-                prev = curr;                    // Go to next node.
-                curr = curr->next;              // Go to next node.    
+                prev = curr;                // Go to next node.
+                curr = curr->next;          // Go to next node.    
             }
         }
 
