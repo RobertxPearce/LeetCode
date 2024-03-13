@@ -14,14 +14,14 @@ public:
     int nodeAmt = 0;
 
     int countNodes(TreeNode* root) {
-        if (root == NULL)
-            return 0;
+        if (root == NULL)           // Check if param is null.
+            return 0;               // If so return/ add nothing.
        
-        nodeAmt += 1;
+        nodeAmt += 1;               // Add 1 to counter.
         
-        countNodes(root->left);
-        countNodes(root->right); 
+        countNodes(root->left);     // Recursivly call on left.
+        countNodes(root->right);    // Recursivly call on right.
         
-        return nodeAmt;
+        return nodeAmt;             // Return final count.
     }
 };
